@@ -5,7 +5,7 @@
 import React, { createContext, useState } from 'react';
 import uuid from 'uuid/v1';
 
-export const BookContext = createContext();
+
 
 const BookContextProvider = (props) => {
   const [books, setBooks] = useState([
@@ -29,6 +29,8 @@ const BookContextProvider = (props) => {
     </BookContext.Provider>
   );
 }
+
+export const BookContext = createContext();
  
 export default BookContextProvider;
 
