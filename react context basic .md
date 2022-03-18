@@ -69,6 +69,25 @@ import { BookContext } from './BookContext';
 
 ```
 
+##### another way ......................
+in context file js 
+```js
+export const useBookContext = () => {
+  const context = useContext(BookContext)
+
+  if (!context) {
+    throw Error('useBookContext must be used inside an AuthContextProvider')
+  }
+
+  return context
+}
+
+```
+```js
+ const { books, addBook, removeBook  } = useBookContext();
+```
+
+
 --------------------------------------------------------------------------------------
 ### If want to save data is localstorage......
 
