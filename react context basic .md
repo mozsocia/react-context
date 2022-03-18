@@ -59,7 +59,7 @@ export default App;
 
 ```
 
-#### use in component
+#### use in component___________________________________________________
 
 ```js
 import React, { useContext } from 'react';
@@ -70,7 +70,7 @@ import { BookContext } from './BookContext';
 ```
 
 ##### another way ......................
-in context file js 
+in BookContext js file add 
 ```js
 export const useBookContext = () => {
   const context = useContext(BookContext)
@@ -83,7 +83,12 @@ export const useBookContext = () => {
 }
 
 ```
+
+use...
+
 ```js
+import { useBookContext } from './BookContext';
+
  const { books, addBook, removeBook  } = useBookContext();
 ```
 
